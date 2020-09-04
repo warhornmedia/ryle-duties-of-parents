@@ -1,0 +1,27 @@
+--- 
+title: "The Duties of Parents"
+author: "J. C. Ryle"
+date: "1888"
+description: "A wonderful, practical sermon on biblical parenting."
+params:
+  project: "ryle-duties-of-parents"
+  scans: ""
+  build: "1"
+site: bookdown::bookdown_site
+always_allow_html: yes
+documentclass: book
+cover-image: "cover.png"
+url: "https://warhornmedia.github.io/ryle-duties-of-parents"
+---
+
+```{r, include=FALSE} 
+if (!dir.exists("classics-template-files")) {
+download.file(url="https://github.com/warhornmedia/classics-template-files/archive/master.zip", destfile = "classics-template-files.zip")
+unzip(zipfile = "classics-template-files.zip", overwrite = TRUE)
+file.remove("classics-template-files.zip")
+file.rename("classics-template-files-master", "classics-template-files")
+}
+```
+
+```{r, child='classics-template-files/rmds/classics-cover-page.Rmd'}
+```
