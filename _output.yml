@@ -25,11 +25,11 @@ bookdown::gitbook:
       all: no
     download: ["pdf", "epub", "mobi"]
   includes:
-    after_body: html/reftagger.html
+    after_body: classics-template-files/html/reftagger.html
 bookdown::pdf_book:
   includes:
-    in_header: latex/preamble.tex
-    before_body: latex/before_body.tex
+    in_header: classics-template-files/latex/preamble.tex
+    before_body: classics-template-files/latex/before_body.tex
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes
