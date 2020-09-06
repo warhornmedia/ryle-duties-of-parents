@@ -4,14 +4,13 @@ author: "J. C. Ryle"
 date: "1888"
 description: "A wonderful, practical sermon on biblical parenting."
 params:
-  project: "ryle-duties-of-parents"
   scans: ""
   build: "1"
-site: bookdown::bookdown_site
-always_allow_html: yes
-documentclass: book
 cover-image: "cover.png"
 url: "https://warhornmedia.github.io/ryle-duties-of-parents"
+always_allow_html: yes
+site: bookdown::bookdown_site
+documentclass: book
 ---
 
 ```{r, include=FALSE} 
