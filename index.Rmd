@@ -6,6 +6,7 @@ description: "A wonderful, practical sermon on biblical parenting."
 params:
   scans: ""
   build: "1"
+  project: "ryle-duties-of-parents"
 cover-image: "cover.png"
 url: "https://warhornmedia.github.io/ryle-duties-of-parents"
 always_allow_html: yes
@@ -22,5 +23,13 @@ file.rename("classics-template-files-master", "classics-template-files")
 }
 ```
 
+# Test outputting xfun::session_info('knitr')
+
+```{r}
+cat(xfun::session_info('knitr'))
+```
+
+
 ```{r, child='classics-template-files/rmds/classics-cover-page.Rmd'}
 ```
+
