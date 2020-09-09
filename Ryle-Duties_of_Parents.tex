@@ -41,46 +41,6 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -145,22 +105,11 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{test-outputting-xfunsession_infoknitr}{%
-\chapter{Test outputting xfun::session\_info(`knitr')}\label{test-outputting-xfunsession_infoknitr}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{cat}\NormalTok{(xfun}\OperatorTok{::}\KeywordTok{session\_info}\NormalTok{(}\StringTok{\textquotesingle{}knitr\textquotesingle{}}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## R version 4.0.2 (2020-06-22) Platform: x86_64-pc-linux-gnu (64-bit) Running under: Ubuntu 16.04.6 LTS  Locale:   LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C                 LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8       LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8      LC_PAPER=en_US.UTF-8       LC_NAME=C                    LC_ADDRESS=C               LC_TELEPHONE=C               LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C         Package version:   evaluate_0.14   glue_1.4.2      graphics_4.0.2  grDevices_4.0.2   highr_0.8       knitr_1.29      magrittr_1.5    markdown_1.1      methods_4.0.2   mime_0.9        stats_4.0.2     stringi_1.4.6     stringr_1.4.0   tools_4.0.2     utils_4.0.2     xfun_0.16         yaml_2.2.1
-\end{verbatim}
-
 \hypertarget{a-warhorn-classics-book}{%
 \chapter*{\texorpdfstring{\href{https://classics.warhornmedia.com/}{A Warhorn Classics Book}}{A Warhorn Classics Book}}\label{a-warhorn-classics-book}}
 \addcontentsline{toc}{chapter}{\href{https://classics.warhornmedia.com/}{A Warhorn Classics Book}}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{/home/travis/build/warhornmedia/ryle-duties-of-parents/classics-template-files/images/whitelogo} \end{center}
 
 \begin{center}
 
@@ -190,7 +139,7 @@ God bless,
 \subsubsection*{Cover}\label{cover}}
 \addcontentsline{toc}{subsubsection}{Cover}
 
-\includegraphics{cover.png}
+\includegraphics{cover.jpg}
 
 \hypertarget{sermon}{%
 \chapter*{Sermon}\label{sermon}}
