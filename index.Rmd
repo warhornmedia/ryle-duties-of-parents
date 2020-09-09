@@ -5,9 +5,9 @@ date: "1888"
 description: "A wonderful, practical sermon on biblical parenting."
 params:
   scans: ""
-  build: "1"
+  build: "2"
   project: "ryle-duties-of-parents"
-cover-image: "cover.png"
+cover-image: "cover.jpg"
 url: "https://warhornmedia.github.io/ryle-duties-of-parents"
 always_allow_html: yes
 site: bookdown::bookdown_site
@@ -22,13 +22,6 @@ file.remove("classics-template-files.zip")
 file.rename("classics-template-files-master", "classics-template-files")
 }
 ```
-
-# Test outputting xfun::session_info('knitr')
-
-```{r}
-cat(xfun::session_info('knitr'))
-```
-
 
 ```{r, child='classics-template-files/rmds/classics-cover-page.Rmd'}
 ```
