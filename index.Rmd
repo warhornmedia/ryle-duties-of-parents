@@ -11,6 +11,17 @@ cover-image: "cover.jpg"
 url: "https://warhornmedia.github.io/ryle-duties-of-parents"
 always_allow_html: yes
 site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    config:
+      toc:
+        scroll_highlight: yes
+        before: |
+          <li><a href="https://www.warhornmedia.com/"><img src="classics-template-files/images/warhornlogo.png" width="260"></a></li>
+          <li><a href="./">Duties of Parents — J. C. Ryle</a></li>
+        after: |
+          <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+      edit: https://github.com/warhornmedia/ryle-duties-of-parents/edit/master/%s
 documentclass: book
 ---
 
