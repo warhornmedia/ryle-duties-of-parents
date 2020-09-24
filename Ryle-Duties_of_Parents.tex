@@ -69,7 +69,7 @@
 \setcounter{secnumdepth}{5}
 % DEFINE PHYSICAL DOCUMENT SETTINGS HD
 % media settings
-\usepackage[paperwidth=5.5in, paperheight=8.5in]{geometry}
+\usepackage[paperwidth=5.5in, paperheight=8in]{geometry}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -78,6 +78,26 @@
   \thm@preskip=8pt plus 2pt minus 4pt
   \thm@postskip=\thm@preskip
 }
+
+\usepackage{titling}
+\usepackage{pdfpages}
+\IfFileExists{./cover.pdf}{
+  \newcommand{\myCover}{./cover.pdf}}
+  {\IfFileExists{./cover.jpg}{
+    \newcommand{\myCover}{./cover.jpg}}
+    {\IfFileExists{./cover.png}{
+      \newcommand{\myCover}{./cover.png}}{}
+    }
+  }
+\@ifundefined{myCover}
+{}
+{
+\pretitle{\begin{center}\includepdf{cover.jpg}}
+\posttitle{\end{center}\setcounter{page}{0}}
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+}
+\clearpage\pagenumbering{roman}
 
 \newenvironment{poetry}[0]{\par\leftskip=2em\rightskip=2em}{\par\medskip}
 
@@ -99,18 +119,12 @@
 \begin{document}
 \maketitle
 
-\mainmatter
+
 
 {
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{cover}{%
-\chapter*{Cover}\label{cover}}
-\addcontentsline{toc}{chapter}{Cover}
-
-\includegraphics{cover.jpg}
-
 \hypertarget{about-this-book}{%
 \chapter*{About this book}\label{about-this-book}}
 \addcontentsline{toc}{chapter}{About this book}
@@ -137,17 +151,14 @@ God bless,
 
 ---The Warhorn Team
 
-\hypertarget{latest-updates-to-this-book}{%
-\subsubsection*{Latest updates to this book}\label{latest-updates-to-this-book}}
-\addcontentsline{toc}{subsubsection}{Latest updates to this book}
-
-2020-09-16 \textbar{} v0.1 \textbar{} completed text with footnotes
-
 \hypertarget{original}{%
 \subsubsection*{Original}\label{original}}
 \addcontentsline{toc}{subsubsection}{Original}
 
 Scanned images of the original printing of this book are available \href{https://www.google.com/books/edition/Wheat_Or_Chaff/il5QAQAAMAAJ?hl=en\&gbpv=1\&pg=PA219\&printsec=frontcover}{here}.
+
+\clearpage
+\setcounter{page}{1}\pagenumbering{arabic}
 
 \hypertarget{how-should-a-child-be-trained}{%
 \chapter*{How should a child be trained?}\label{how-should-a-child-be-trained}}
