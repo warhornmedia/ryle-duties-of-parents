@@ -35,4 +35,3 @@ file.rename("classics-template-files-master", "classics-template-files")
 
 ```{r, child='classics-template-files/rmds/classics-cover-page.Rmd'}
 ```
-
