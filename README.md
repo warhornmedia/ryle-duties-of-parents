@@ -2,7 +2,9 @@
 
 ## J. C. Ryle
 
-Originally an 1888 sermon.
+## 1857
+
+"Originally titled simply 'How should a child be trained?,' this short book is a gem, filled with practical, hard-hitting advice on raising your children in the faith."
 
 Available for your reading pleasure here:
 https://warhornmedia.github.io/ryle-duties-of-parents
