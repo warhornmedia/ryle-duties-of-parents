@@ -1,5 +1,5 @@
 bookdown::gitbook:
-  css: classics-template-files/css/style.css
+  css: ["classics-template-files/css/style.css", "classics-template-files/css/warhorn-classics-sermon.css"]
   split_by: rmd
   config:
     fontsettings:
