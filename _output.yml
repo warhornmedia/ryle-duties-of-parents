@@ -1,5 +1,6 @@
 bookdown::gitbook:
-  css: ["classics-template-files/css/style.css", "classics-template-files/css/warhorn-classics-sermon.css"]
+  css: ["classics-template-files/css/style.css"]
+  toc_depth: 3
   split_by: rmd
   config:
     fontsettings:
@@ -20,10 +21,12 @@ bookdown::gitbook:
     in_header: classics-template-files/html/in_header.html
     after_body: classics-template-files/html/after_body.html
 bookdown::pdf_book:
+  toc_depth: 3
   includes:
     in_header: classics-template-files/latex/preamble.tex
     before_body: classics-template-files/latex/before_body.tex
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes
-bookdown::epub_book: default
+bookdown::epub_book:
+  toc_depth: 3
