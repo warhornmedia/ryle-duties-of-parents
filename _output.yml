@@ -1,5 +1,5 @@
 bookdown::gitbook:
-  css: ["classics-template-files/css/style.css"]
+  css: classics-template-files/css/style.css
   toc_depth: 3
   split_by: rmd
   config:
