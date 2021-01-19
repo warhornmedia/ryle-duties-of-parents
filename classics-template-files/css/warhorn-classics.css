@@ -67,6 +67,26 @@ NIGHT THEME
   	font-feature-settings: "liga", "clig";
 }
 
+.poetry ul {
+    list-style-type: none;
+    font-style: italic;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+.poetry li p {
+    margin-bottom: 0 !important;
+}
+
+.poetry > ul > li {
+    margin-left: 3em;
+    text-indent: -3em;
+}
+
+.poetry > ul > li > ul > li {
+    margin-left: -1em;
+}
+
 /* opening line style */
 h1 + p::first-line, h2 + p::first-line {
 	/*all small caps workaround*/
@@ -282,8 +302,8 @@ a.anchor-section::before {
     text-align: center;
     padding: 0;
     z-index: 1;
-    top: 20%;
-    left: 160%;
+    top: 90%; /* drop tooltip underneath link icon */
+    right: calc(-55px + 50%); /* center tooltip horizontally on link icon */
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 20%);
     opacity: 0;
     transition: opacity .2s;
@@ -291,7 +311,7 @@ a.anchor-section::before {
 
 .hasAnchor a.anchor-section:hover::after {
     visibility: visible;
-    transition-delay: 1s;
+    transition-delay: .5s;
     opacity: .7;
 }
 
@@ -303,6 +323,10 @@ h1.hasAnchor a.anchor-section {
 .book .book-body .page-wrapper .page-inner section.normal > div ~ div h1.hasAnchor a.anchor-section {
     font-size: inherit;
     transform: none;
+}
+
+.hasAnchor { /* keep tooltips from forcing horizontal scroll */
+    padding-right: 80px;
 }
 
 /*--*/
@@ -339,8 +363,10 @@ h2 {
 	font-weight: 700;
 	line-height: 1.5em;
 	letter-spacing: .6px;
-	border-left: .15em solid #1aa9ab;
-	padding-left: .5em;
+/*    position: relative;*/
+/*    left: -1.2em;*/
+	border-left: .2em solid #1aa9ab;
+	padding-left: 1em;
 }
 
 /*sepia mode h2 rule*/
@@ -700,6 +726,10 @@ pre code {
 
 .rtTooltip, .rtTooltip a, .rtTooltipBody p, .rtTooltipBody span {
 	letter-spacing: .0125em;
+}
+
+.rtBibleRef {
+    white-space: nowrap;
 }
 
 /* SEPIA MODE */

@@ -33,7 +33,7 @@
   
 
 <link rel="next" href="01-Sermon.html"/>
-<script src="libs/header-attrs-2.4.5/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,10 +51,12 @@
 
 
 
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<!-- include Adobe Fonts web project stylesheet -->
+<!--- include Adobe Fonts web project stylesheet -->
 <link rel="stylesheet" href="https://use.typekit.net/uix0fgg.css">
+<!--- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 
 
@@ -129,19 +131,20 @@
 <img src="classics-template-files/images/whitelogo-blackletter.png" width="50%" style="display: block; margin: auto;" />
 -->
 <p>Originally published as “How Should a Child be Trained?” in <em>Wheat or Chaff?</em> (Robert Carter &amp; Brothers, 1857), 219–283.</p>
-<p>Republished by <a href="https://classics.warhornmedia.com/">Warhorn Classics</a>—making classic Christian content available for free online in high quality, readable formats.</p>
+<p>Republished by <a href="https://classics.warhornmedia.com/">Warhorn Classics</a>—making classic Christian content available online for <span class="smallcaps">free</span> in high quality, readable formats.</p>
 <p>The latest version of this book can always be found <a href="https://warhornmedia.github.io/ryle-duties-of-parents/">here</a> in many electronic formats for your reading convenience on any device.</p>
 <div id="downloads" class="section level4 unnumbered">
 <h4>Downloads</h4>
 <p><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <a href="https://warhornmedia.github.io/ryle-duties-of-parents//Ryle-Duties_of_Parents.pdf">Download PDF</a></p>
 <p><i class="fa fa-book" aria-hidden="true"></i> <a href="https://warhornmedia.github.io/ryle-duties-of-parents//Ryle-Duties_of_Parents.epub">Download ePub</a></p>
-<p>We hope this book is a blessing to you. If it is, please <a href="https://warhornmedia.com/give">make a one-time or recurring contribution</a> right now, sponsor a book from our upcoming list, or volunteer your proofreading or technical skills to help produce more content. Contact <a href="mailto:lucas@beggarsborn.com">Lucas Weeks</a> to get involved.</p>
-<p>God bless,</p>
-<p>—The Warhorn Team</p>
 </div>
 <div id="original" class="section level4 unnumbered">
 <h4>Original</h4>
 <p>Scanned images of the original printing of this book are available <a href="https://www.google.com/books/edition/Wheat_Or_Chaff/il5QAQAAMAAJ?hl=en&amp;gbpv=1&amp;pg=PA219&amp;printsec=frontcover">here</a>.</p>
+</div>
+<div id="support-warhorn-classics" class="section level4 unnumbered">
+<h4>Support Warhorn Classics</h4>
+<p>We hope this book is a blessing to you. If it is, please <a href="https://warhornmedia.com/give">make a one-time or recurring contribution</a> right now, sponsor a book from our upcoming list, or volunteer your proofreading or technical skills to help produce more content. Contact <a href="mailto:lucas@beggarsborn.com">Lucas Weeks</a> to get involved.</p>
 <!--- Include the cover (if it exists), but only in the HTML version of the book
 # Cover {-} 
 <img src="cover.jpg" width="75%" style="display: block; margin: auto;" />
@@ -170,6 +173,26 @@
       $(".navigation-next").detach().appendTo('.book-body');
    });
 </script>
+
+<!--- make it so en dashes never break, ORIGINAL script using .nobreak CSS span::: problem: breaks popup functionality of refTagger, even though the RegEx avoids messing with any refTagger refs; problem is with the script targeting any element which includes the refTagger, even if the RegEx avoids doing anything to the refTagger link HTML itself. It does not seem possible to use selectors to select everything but avoid selecting <a> tags with class "rtBibleRef". Problem is that if you select the <p> which has the link in it, you can't avoid selecting the <a> inside it. Script doesn't break reftagger if it is loaded on document.ready. Solution seems to be to find a way to use document.ready and somehow avoid Scripture ref en dashes. Maybe borrow reftagger's bible book regex, but that seems hopeless, esp. since I don't believe there's general browser support for negative lookbehind RegEx...
+<script>
+    $(window).load(function() {
+        $("section.normal").html(function(_, html) {
+            return  html.replace(/(–.)(?!([^<^>]+>)|(\d*<\/a>))/g, '<span class="nobreak">$1</span>')
+        });
+    });
+</script>
+-->
+
+<!--- en dash script using HTML word-joiner entity --
+<script>
+    $(window).load(function() {
+        $("body").html(function(_, html) {
+            return  html.replace(/(–)(.)(?![^<^>]+>)/g, '$1&#8288;$2')
+        });
+    });
+</script>
+-->
             </section>
 
           </div>

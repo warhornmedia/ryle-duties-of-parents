@@ -33,7 +33,7 @@
   
 <link rel="prev" href="index.html"/>
 
-<script src="libs/header-attrs-2.4.5/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,10 +51,12 @@
 
 
 
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<!-- include Adobe Fonts web project stylesheet -->
+<!--- include Adobe Fonts web project stylesheet -->
 <link rel="stylesheet" href="https://use.typekit.net/uix0fgg.css">
+<!--- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 
 
@@ -355,6 +357,26 @@
       $(".navigation-next").detach().appendTo('.book-body');
    });
 </script>
+
+<!--- make it so en dashes never break, ORIGINAL script using .nobreak CSS span::: problem: breaks popup functionality of refTagger, even though the RegEx avoids messing with any refTagger refs; problem is with the script targeting any element which includes the refTagger, even if the RegEx avoids doing anything to the refTagger link HTML itself. It does not seem possible to use selectors to select everything but avoid selecting <a> tags with class "rtBibleRef". Problem is that if you select the <p> which has the link in it, you can't avoid selecting the <a> inside it. Script doesn't break reftagger if it is loaded on document.ready. Solution seems to be to find a way to use document.ready and somehow avoid Scripture ref en dashes. Maybe borrow reftagger's bible book regex, but that seems hopeless, esp. since I don't believe there's general browser support for negative lookbehind RegEx...
+<script>
+    $(window).load(function() {
+        $("section.normal").html(function(_, html) {
+            return  html.replace(/(–.)(?!([^<^>]+>)|(\d*<\/a>))/g, '<span class="nobreak">$1</span>')
+        });
+    });
+</script>
+-->
+
+<!--- en dash script using HTML word-joiner entity --
+<script>
+    $(window).load(function() {
+        $("body").html(function(_, html) {
+            return  html.replace(/(–)(.)(?![^<^>]+>)/g, '$1&#8288;$2')
+        });
+    });
+</script>
+-->
             </section>
 
           </div>
