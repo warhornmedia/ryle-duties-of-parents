@@ -7,7 +7,7 @@ description: "Originally titled simply 'How Should a Child be Trained?,' this sh
 params:
   pubinfo: "Originally published as “How Should a Child be Trained?” in *Wheat or Chaff?* (Robert Carter &\ Brothers, 1857), 219–283."
   scans: "https://www.google.com/books/edition/Wheat_Or_Chaff/il5QAQAAMAAJ?hl=en&gbpv=1&pg=PA219&printsec=frontcover"
-  build: "8"
+  build: "9"
 cover-image: "cover.jpg"
 url: "https://warhornmedia.github.io/ryle-duties-of-parents/"
 output: 
